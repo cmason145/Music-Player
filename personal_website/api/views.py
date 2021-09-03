@@ -13,6 +13,15 @@ class RoomView(generics.ListAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
 
+class GetRoom(APIView):
+    serializer_class = RoomSerializer
+    lookup_url_kwarg = 'code'
+    
+    def get(self, request, format=None):
+        code = request.GET.get(self.lookup_url_kwarg)
+        if code != None:
+            pass
+
 class CreateRoomView(APIView):
     serializer_class = CreateRoomSerializer
     
@@ -38,3 +47,4 @@ class CreateRoomView(APIView):
                 return Response(RoomSerializer(room).data, status=status.HTTP_201_CREATED)
             
         return Response({'Bad Request': 'Invalid data...'}, status=status.HTTP_400_BAD_REQUEST)
+

@@ -5,6 +5,7 @@ urlpatterns = [
     path('', index),
     path('join', index),
     path('create', index),
+    path('room/<str:roomCode>', index),
     path('projects', index),
     path('about_me', index),
     path('resume', index)
