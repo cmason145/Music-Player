@@ -16,6 +16,10 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   optimization: {
@@ -25,17 +29,8 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env": {
         // This has effect on the react lib size
-        NODE_ENV: JSON.stringify("development"),
+        NODE_ENV: JSON.stringify("production"),
       },
     }),
   ],
-  entry: {
-    "app": "src/app.js"
-  },
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: "[name].js",
-    sourceMapFilename: "[name].js.map"
-  },
-  devtool: "source-map"
 };

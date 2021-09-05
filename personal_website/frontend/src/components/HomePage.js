@@ -5,6 +5,7 @@ import Room from "./Room";
 import ProjectsPage from "./ProjectsPage";
 import AboutMePage from "./AboutMePage";
 import ResumePage from "./ResumePage";
+import Navbar from "./Navbar/Navbar"
 import { BrowserRouter as 
             Router, 
             Switch, 
@@ -25,7 +26,7 @@ export default class HomePage extends Component{
             <Router>
                 <Switch>
                     <Route exact path='/'>
-                        <p>This is the home page</p>
+                        <Navbar />
                     </Route>  
                     <Route path='/join' component={RoomJoinPage} />
                     <Route path='/create' component={CreateRoomPage} />

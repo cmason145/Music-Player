@@ -3,6 +3,8 @@ import { render } from "react-dom";
 import HomePage from "./HomePage"
 import RoomJoinPage from "./RoomJoinPage";
 import CreateRoomPage from "./CreateRoomPage";
+import Navbar from "./Navbar/Navbar"
+import './App.css'
 
 export default class App extends Component { //App is the name of the component, which can be re-used
     constructor(props) {

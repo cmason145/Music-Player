@@ -1,8 +1,9 @@
 html, body {
     height: 100%;
     margin: 0;
-    /* color: white; */
+    /* color: rgb(173, 17, 17); */
     padding: 0%;
+    background-size: cover;
 }
 
 #main {
@@ -17,4 +18,5 @@ html, body {
     width: 100%;
     height: 100%;
     display: flex;
+    /* color: green; */
 }
