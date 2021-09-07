@@ -6,6 +6,7 @@ import ProjectsPage from "./ProjectsPage";
 import AboutMePage from "./AboutMePage";
 import ResumePage from "./ResumePage";
 import Navbar from "./Navbar/Navbar"
+import resume from './resume.pdf';
 import { BrowserRouter as 
             Router, 
             Switch, 
